@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import PasswordEncryption.BCryptUtil;
 import na.ecomm.model.Product;
 
 
@@ -25,15 +26,37 @@ public class LoginDao {
         try (Connection connection = DriverManager
             .getConnection("jdbc:mysql://localhost:3306/userdb", "root", "secret");
         		          //jdbc:mysql://localhost:3306/schemanew", "root", "secret"
+        		
+        		
             // Step 2:Create a statement using connection object
             PreparedStatement preparedStatement = connection
-            .prepareStatement("select * from userdb.registeruser where name = ? and pass = ? ")) {
+            .prepareStatement("select * from userdb.registeruser where name = ? ")) {
+        	
             preparedStatement.setString(1, loginBean.getUsername());
-            preparedStatement.setString(2, loginBean.getPassword());
+            //preparedStatement.setString(2, loginBean.getPassword());
 
             System.out.println(preparedStatement);
             ResultSet rs = preparedStatement.executeQuery();
+
             status = rs.next();
+          
+            if (BCryptUtil.verifyHash(loginBean.getPassword(), rs.getString("pass"))) {
+            	status = true;
+            	
+            } else {
+            	status = false; 
+            }
+            
+            
+            System.out.println("sanjay: "+rs.getString("pass"));
+            
+            System.out.println (BCryptUtil.verifyHash(loginBean.getPassword(), rs.getString("pass")));
+            
+            
+            //status = rs.next();
+            
+            
+            
 
         } catch (SQLException e) {
             // process sql exception
@@ -42,7 +65,10 @@ public class LoginDao {
         return status;
     }
 
-    
+    public void verifyPassword (String password) {
+    	
+    	
+    }
     
   
     

@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import PasswordEncryption.AuthorizationManager;
+import PasswordEncryption.BCryptUtil;
 import SQL.SQL;
 
 //import net.javaguides.login.bean.LoginBean;
@@ -34,6 +36,8 @@ public static String un;
         username = request.getParameter("username");
         String password = request.getParameter("password");
         LoginBean loginBean = new LoginBean();
+        
+        //Set username and password for login bean 
         loginBean.setUsername(username);
         loginBean.setPassword(password);
 
@@ -47,6 +51,7 @@ public static String un;
                  SQL.un(un);
                 name2 = DaoClass.un(un);
                 pdfServlet.pdf_name(un);
+                PDFGenerator.pdf_name(un);
                
             } else {
                 HttpSession session = request.getSession();

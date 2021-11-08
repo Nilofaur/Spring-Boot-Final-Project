@@ -21,16 +21,27 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
+import SQL.SQL;
+
 //https://www.tutorialspoint.com/jfreechart/jfreechart_bar_chart.htm
 //https://www.tutorialspoint.com/itext/itext_adding_image_to_pdf.htm
 //https://www.concretepage.com/itext/add-image-in-pdf-using-itext-in-java
 //https://www.viralpatel.net/generate-pie-chart-bar-graph-in-pdf-using-itext-jfreechart/
 
 public class PDFGenerator {
+	
+	public static String name;
+
+	public static String pdf_name(String name) {
+
+		PDFGenerator.name = name;
+
+		return name;
+
+	}
 
 	// TODO: Change Variable Names and Styling of report private static String
-	private static String FILE = "C:/Users/nilof/Desktop/UNI/CSCM10/CSCM20/project_pdf/ok.pdf";
-
+	private static String FILE = "";
 	private static Font catFont = new Font(Font.FontFamily.COURIER, 20, Font.BOLD);
 	private static Font subFont = new Font(Font.FontFamily.COURIER, 16, Font.BOLD);
 	private static Font smallBold = new Font(Font.FontFamily.COURIER, 12, Font.BOLD);
@@ -43,11 +54,15 @@ public class PDFGenerator {
 		System.out.println("calling test ");
 
 	}
+	
 
 	
 	  public static void generateReport(java.util.List<ManualUpdate> tableData) {
 	  try {
-      System.out.println("pdf generateddddd 123 ");
+		  FILE="C:/Users/nilof/Desktop/UNI/FINAL YEAR PROJECT/learnWorkspace/"+ "Lifestyle/WebContent/img/"+PDFGenerator.name+".pdf";
+		  
+		  System.out.println("FILE"+FILE);
+      System.out.println("pdf generator class name: "+name);
 	  Document document = new Document();
 	  
 	  for (ManualUpdate element : tableData) { privateTableData.add(element); }
