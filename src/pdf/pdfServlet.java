@@ -48,7 +48,14 @@ public static String pdf_name(String name) {
 		
 		PDFGenerator.generateReport(DBUtil.getManualUpdate("SELECT * FROM userdb.manual_update where userid="+id+""));
 		
-		 // request.getRequestDispatcher("/report.jsp").forward(request, response);
+		String submit = request.getParameter("GenerateReport");
+		System.out.println("sub?"+submit);
+		
+		request.getRequestDispatcher("/report.jsp").forward(request, response);
+
+		
+		
+		
 		 
 		
 

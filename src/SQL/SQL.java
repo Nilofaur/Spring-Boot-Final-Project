@@ -226,7 +226,7 @@ public class SQL extends HttpServlet {
 		SQL.database();
 
 		query = "select userid from registeruser where name = '" + name + "'";
-		System.out.println("login name" + name);
+		System.out.println("login name sql class" + name);
 
 		pst = SQL.connection.prepareStatement(query);
 
@@ -347,10 +347,11 @@ query="INSERT manual_update (userid,bf_cal, lun_cal, din_cal, activity, minutes,
 
 	public static List<SQLinitialisation> get_all() {
 		SQL.database();
+		
 		List<SQLinitialisation> a = new ArrayList<>();
 
 		try {
-			System.out.println("loginservlet.un?? sql.java " + LoginServlet.un);
+			System.out.println("loginservlet.un?? get_all() " + LoginServlet.un);
 			query = "SELECT registeruser.name, aboutme.* FROM registeruser INNER JOIN aboutme ON registeruser.userid=aboutme.userid where name='"
 					+ LoginServlet.un + "'";
 
@@ -363,7 +364,7 @@ query="INSERT manual_update (userid,bf_cal, lun_cal, din_cal, activity, minutes,
 
 					everyday_maxcalorie = rs.getInt(11);
 					name1 = rs.getString(1);
-					user_id = rs.getInt(2);
+					user_id = rs.getInt("userid");
 					plan = rs.getString(10);
 
 					System.out.println("get_all()" + everyday_maxcalorie);
