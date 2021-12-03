@@ -58,40 +58,14 @@ img {
 	color: black;
 }
 
-.bottom-left {
-	position: absolute;
-	bottom: 8px;
-	left: 16px;
-}
 
-.top-left {
-	position: absolute;
-	top: 8px;
-	left: 16px;
-}
-
-.top-right {
-	position: absolute;
-	top: 8px;
-	right: 16px;
-}
-
-.bottom-right {
-	position: absolute;
-	bottom: 8px;
-	right: 16px;
-}
-
-.centered {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 }
 </style>
 </head>
 
 <body>
+
+
 
 	<ul class="nav justify-content-end">
 		<li class="nav-item"><a class="nav-link" href="register.jsp">Register</a>
@@ -100,8 +74,7 @@ img {
 		</li>
 		<li class="nav-item"><a class="nav-link" href="login.jsp">Logout</a>
 		</li>
-		<li class="nav-item"><a class="nav-link"
-			href="http://localhost:9091/">Payment</a></li>
+	
 	</ul>
 
 	<div class="test">

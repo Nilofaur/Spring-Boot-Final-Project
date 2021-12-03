@@ -8,6 +8,16 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+	crossorigin="anonymous"></script>
+	
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>beauty</title>
     <!--[if lt IE 9]>
@@ -54,7 +64,7 @@ h3 {
 }
 h4 {
     font-size: 24px;
-    color: red;
+    color: black;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -83,7 +93,7 @@ small {
 .clear {
     clear: both;
 }
-.wrapper {
+.fold {
     margin: 0 auto;
     padding: 0 10px;
     width: 940px;
@@ -138,69 +148,69 @@ header nav ul li a {
     color: #fff;
 }
 
-#features ul {
+#pictures ul {
     margin: 80px 0;
 }
-#features ul li {
+#pictures ul li {
     width: 300px;
     padding-top: 300px;
     float: left;
     margin-right: 10px;
     text-align: center;
 }
-#features ul li.feature-1 {
+#pictures ul li.picture-1 {
     background: url('./img/apple.PNG') no-repeat top center ;
    
 }
-#features ul li.feature-2 {
+#pictures ul li.picture-2 {
     background: url('./img/pear.PNG') no-repeat top center;
 }
-#features ul li.feature-3 {
+#pictures ul li.picture-3 {
     background: url('./img/tri.PNG') no-repeat top center;
 }
 
-#features ul li.feature-4 {
-    background: url('./img/rec.PNG') no-repeat top center;
+#pictures ul li.picture-4 {
+    background: url('./img/rectangular.PNG') no-repeat top center;
        
 }
-#features ul li.feature-5 {
+#pictures ul li.picture-5 {
     background: url('./img/hourglass.PNG') no-repeat top center;
 }
-#features ul li.feature-6 {
-    background: url('./img/oval.jpg') no-repeat top center;
+#pictures ul li.picture-6 {
+    background: url('./img/oval.PNG') no-repeat top center;
 }
 
 
-#primary-content {
+#first-stuff {
     background-color: #f8fafa;
     padding: 60px 0;
     text-align: center;
 }
-#primary-content h3 {
+#first-stuff h3 {
     display: block;
     margin: 0 auto 20px auto;
     width: 400px;
     border-bottom: 1px solid #02b8dd;
     padding: 0 0 20px 0;
 }
-#primary-content a img {
+#first-stuff a img {
     margin: 20px 0;
 }
 
-#secondary-content {
+#two-stuff {
     padding: 60px 0;
     text-align: center;
 }
-#secondary-content article {
+#two-stuff article {
     width: 460px;
     height: 270px;
     float: left;
     background-color: #f5f5f5;
 }
-#secondary-content article:first-child {
+#two-stuff article:first-child {
     margin-right: 20px;
 }
-#secondary-content article .overlay {
+#two-stuff article .overlay {
     background: rgba(255, 255, 255, .95);
     height: 230px;
     width: 190px;
@@ -275,12 +285,12 @@ html {
   scroll-behavior: smooth;
 }
 
-#section1 {
+#part1 {
   height: 100px;
   background-color: pink;
 }
 
-#section2 {
+#part2 {
   height: 100px;
   background-color: yellow;
 }
@@ -290,7 +300,7 @@ html {
  
 <body> 
 <header>
-     <div class="wrapper">
+     <div class="fold">
         <h1>Lifestyle<span class="color">.</span></h1>
         <nav>
             <ul>
@@ -307,40 +317,40 @@ html {
     
     <div  id="hero-image">
   
-    <div class="wrapper">
+    <div class="fold">
         <h2><strong>Lifestyle App</strong><br/>
         <br>
        Beauty Page </h2>
-        <a href="#features" class="button-1">Get Started</a>
+        <a href="#pictures" class="button-1">Get Started</a>
     </div>
 </div>
-<center><h5>Which Body shape do you belong to ? Please see the below section: </h5></center>
-  <div id="features">
-    <div class="wrapper">
+<center><h5>Which Body shape do you belong to ? Please see the below part: </h5></center>
+  <div id="pictures">
+    <div class="fold">
         <ul>
-            <li class="feature-1">
+            <li class="picture-1">
                 <h4>Apple</h4>
                 <p>Bust is larger than the hips and the waist is well defined.</p>
             </li>
-            <li class="feature-2">
+            <li class="picture-2">
                 <h4>Pear</h4>
                 <p>Hips are larger than your bust and you have a defined waist</p>
             </li>
-            <li class="feature-3">
+            <li class="picture-3">
                 <h4>Inverted Triangle </h4>
                 <p>Waist larger than the bust and hips.</p>
             </li>
-             <li class="feature-4">
+             <li class="picture-4">
                 <h4>Rectangular</h4>
                 <p>Bust and hips are basically the same measurement. Waist is slightly smaller than the bust and hips.</p>
             </li>
-            <li class="feature-5">
+            <li class="picture-5">
                 <h4>Hour Glass</h4>
                 <p>Bust and hips are basically the same measurement and you have a defined waist.</p>
             </li>
-            <li class="feature-6">
+            <li class="picture-6">
                 <h4>Oval</h4>
-                <p>Large bust, narrow hips, and a full mid section.</p>
+                <p>Large bust, narrow hips, and a full mid part.</p>
             </li>
             
             <div class="clear"></div>
@@ -348,98 +358,57 @@ html {
     </div>
 </div>
     
-    <div id="primary-content">
-    <div class="wrapper">
+    <div id="first-stuff">
+    <div class="fold">
         <article>
             <h5>Please select your shape to know more:</h5>
   <div class = container>
 
 <form action="beauty" method="post">
-<input type="radio" id="shape" name="shape" value="apple">
-  <label for="apple">Apple</label><br>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" id="shape" name="shape" value="apple" >
+  <label class="form-check-label" for="apple">Apple</label><br>
+</div>
+
+<div class="form-check form-check-inline">
   <input type="radio" id="shape" name="shape" value="pear">
-  <label for="pear">Pear</label><br>
-  <input type="radio" id="shape" name="shape" value="inverted_triangle">
-  <label for="inverted_triangle">Inverted Triangle</label>
- <input type="radio" id="shape" name="shape" value="rec">
-  <label for="rec">Rectangular</label>
- <input type="radio" id="shape" name="shape" value="hour_glass">
-  <label for="hour_glass">Hour glass</label>
- <input type="radio" id="shape" name="shape" value="oval">
-  <label for="oval">Oval</label>
+  <label class="form-check-label" for="pear">Pear</label><br>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" id="shape" name="shape" value="inverted_triangle">
+  <label class="form-check-label" for="inverted_triangle">Inverted Triangle</label>
+</div>
+
+<div class="form-check form-check-inline">
+ <input class="form-check-input"  type="radio" id="shape" name="shape" value="rectangular">
+  <label class="form-check-label" for="rectangular">Rectangular</label>
+</div>
+
+<div class="form-check form-check-inline">
+ <input class="form-check-input" type="radio" id="shape" name="shape" value="hour_glass">
+  <label class="form-check-label" for="hour_glass">Hour glass</label>
+</div>
+
+<div class="form-check form-check-inline">
+ <input class="form-check-input"  type="radio" id="shape" name="shape" value="oval">
+  <label class="form-check-label" for="oval">Oval</label>
+</div>
 <br> <br>
+
+
 
  <input type="submit">
 </form>
 
-
-
 </div>
 
-            <a href="#"><img src="./img/shape.jpeg" alt="video placeholder" /></a>
+            <a href="#"><img src="./img/shape.jpeg" alt="image" /></a>
         </article>
     </div>
 </div>
     
- <div id="secondary-content">
-    <div class="wrapper">
-        <article style="background-image: url('./img/surf.jpg');">
-            <div class="overlay">
-                <h4>Secondary Content</h4>
-                <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod leo a nibh dignissim tincidunt nam.</small></p>
-                <a href="#" class="more-link">View more</a>
-            </div>
-        </article>
-        <article style="background-image: url('./img/winter.jpg');">
-            <div class="overlay">
-                <h4>Secondary Content</h4>
-                <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod leo a nibh dignissim tincidunt nam.</small></p>
-                <a href="#" class="more-link">View more</a>
-            </div>
-        </article><div class="clear"></div>
-    </div>
-</div>
-    
-  <div id="cta">
-    <div class="wrapper">
-        <h3>Heard Enough?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod leo a nibh dignissim tincidunt. Nam ultricies odio ac neque suscipit volutpat. Ut dictum adipiscing felis sed malesuada. Integer porta sem nec nibh hendrerit imperdiet. </p>
-        <a href="#" class="button-2">Get Started</a>
-    </div>
-</div>
-    
-<footer>
-    <div class="wrapper">
-        <div id="footer-info">
-            <p>Copyright 2014 CompanyName. All rights reserved.</p>
-            <p><a href="#">Terms of Service</a> I <a href="#">Privacy</a></p>
-        </div>
-        <div id="footer-links">
-            <ul>
-                <li><h5>Company</h5></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Meet The Team</a></li>
-                <li><a href="#">What We Do</a></li>
-                <li><a href="#">Careers</a></li>
-            </ul>
-            <ul>
-                <li><h5>Company</h5></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Meet The Team</a></li>
-                <li><a href="#">What We Do</a></li>
-                <li><a href="#">Careers</a></li>
-            </ul>
-            <ul>
-                <li><h5>Company</h5></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Meet The Team</a></li>
-                <li><a href="#">What We Do</a></li>
-                <li><a href="#">Careers</a></li>
-            </ul>
-        </div>
-        <div class="clear"></div>
-    </div>
-</footer>
+
     
 </body>
 </html>
